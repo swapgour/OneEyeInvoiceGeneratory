@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/one_eye_card"
+            />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal"
+        android:background="@drawable/homebg">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/BuyerDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:contentPadding="20dp">
+
+                <LinearLayout
+                    android:id="@+id/buyerDetailsLayour"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="expandBuyerDetails"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="309dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/buyer_details"
+                        android:textColor="@color/Dark"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/mr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:onClick="checkRadioButton"
+                                android:text="@string/mr"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <RadioButton
+                                android:id="@+id/ms"
+                                android:layout_width="115dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:onClick="checkRadioButton"
+                                android:text="@string/ms"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editFullName"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:hint="@string/name"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/editMobileNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:hint="@string/mobile_number"
+                            android:textSize="15sp"
+                            android:inputType="number"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ProductDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:contentPadding="20dp">
+
+                <LinearLayout
+                    android:id="@+id/productDetailsLayour"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="expandProductDetails"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="309dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_details"
+                        android:textColor="@color/Dark"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/product1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:hint="@string/_1"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="200dp"
+                            android:id="@+id/dropdown_menu1"
+                            android:layout_height="48dp"
+                            android:layout_gravity="top"
+                            android:layout_margin="16dp"
+                            android:hint="@string/selectItem"
+                            android:visibility="gone"
+                            android:textSize="10sp">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/auto_complete_text1"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:inputType="none"
+                                android:textSize="15dp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <EditText
+                            android:id="@+id/amount1"
+                            android:layout_width="80dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:hint="@string/amount"
+                            android:inputType="number"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/product2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:hint="@string/_2"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="top"
+                            android:layout_margin="16dp"
+                            android:id="@+id/dropdown_menu2"
+                            android:hint="@string/selectItem"
+                            android:visibility="gone">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/auto_complete_text2"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:textSize="15dp"
+                                android:inputType="none" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <EditText
+                            android:id="@+id/amount2"
+                            android:layout_width="100dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:inputType="number"
+                            android:hint="@string/amount"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/product3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:hint="@string/_3"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="200dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="top"
+                            android:id="@+id/dropdown_menu3"
+                            android:layout_margin="16dp"
+                            android:hint="@string/selectItem"
+                            android:visibility="gone">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/auto_complete_text3"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:textSize="15dp"
+                                android:inputType="none" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <EditText
+                            android:id="@+id/amount3"
+                            android:layout_width="100dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:inputType="number"
+                            android:hint="@string/amount"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/product4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:hint="@string/_4"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="top"
+                            android:layout_margin="16dp"
+                            android:hint="@string/selectItem"
+                            android:id="@+id/dropdown_menu4"
+                            android:visibility="gone">
+
+
+                            <AutoCompleteTextView
+                                android:id="@+id/auto_complete_text4"
+                                android:layout_width="match_parent"
+                                android:textSize="15dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="none" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <EditText
+                            android:id="@+id/amount4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:inputType="number"
+                            android:hint="@string/amount"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/product5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:hint="@string/_5"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="top"
+
+                            android:layout_margin="16dp"
+                            android:id="@+id/dropdown_menu5"
+                            android:hint="@string/selectItem"
+                            android:visibility="gone">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/auto_complete_text5"
+                                android:layout_width="match_parent"
+                                android:textSize="15dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="none" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <EditText
+                            android:id="@+id/amount5"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:inputType="number"
+                            android:hint="@string/amount"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/invoiceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="createPDF"
+                android:text="@string/generate_invoice" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

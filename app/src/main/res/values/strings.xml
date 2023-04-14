@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">1eye Invoice</string>
+    <string name="clothing_accessories_bags_footwear">Clothing | Accessories | Bags | Footwear</string>
+    <string name="generate_invoice">Invoice</string>
+    <string name="buyer_details">Buyer Details</string>
+    <string name="mr">Mr.</string>
+    <string name="ms">Ms</string>
+    <string name="full_name">Full Name</string>
+    <string name="name">Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="product_details">Product Details</string>
+
+    <string name="selectItem">Select Item</string>
+    <string name="amount">₹</string>
+    <string name="_1">1.</string>
+    <string name="_2">2.</string>
+    <string name="_3">3.</string>
+    <string name="_4">4.</string>
+    <string name="_5">5.</string>
+
+    <string-array name="products">
+        <item>Co-erd set</item>
+        <item>One piece</item>
+        <item>Off shoulder</item>
+        <item>Jumpsuit</item>
+        <item>Tops</item>
+        <item>Tang top</item>
+        <item>Shirts</item>
+        <item>Shorts</item>
+        <item>Skirt</item>
+        <item>Stright fit jeans</item>
+        <item>Pant</item>
+        <item>Mom fit jeans</item>
+        <item>Highwaist jeans</item>
+        <item>Footwear</item>
+    </string-array>
+
+</resources>

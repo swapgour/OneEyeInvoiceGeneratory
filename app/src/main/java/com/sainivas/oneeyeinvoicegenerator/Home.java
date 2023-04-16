@@ -436,18 +436,18 @@ public class Home extends AppCompatActivity {
                 productNumber5.setTextAlign(Paint.Align.CENTER);
                 productNumber5.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD));
                 productNumber5.setTextSize(25);
-                canvas.drawText("5.",200,1250,productNumber5);
+                canvas.drawText("5.",200,1270,productNumber5);
 
                 itemList5.setTextAlign(Paint.Align.CENTER);
                 itemList5.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD));
                 itemList5.setTextSize(25);
-                canvas.drawText(item5.toString(),650,1250,itemList5);
+                canvas.drawText(item5.toString(),650,1270,itemList5);
 
 
                 AmountNumber5.setTextAlign(Paint.Align.CENTER);
                 AmountNumber5.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD));
                 AmountNumber5.setTextSize(25);
-                canvas.drawText(amount5.getText().toString(),1150,1250,AmountNumber5);
+                canvas.drawText(amount5.getText().toString(),1150,1270,AmountNumber5);
             }
 
 
